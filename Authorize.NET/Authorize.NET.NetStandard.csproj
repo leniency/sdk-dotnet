@@ -19,4 +19,12 @@ Items removed/ not supported:
 -getAUJobSummaryController</PackageReleaseNotes>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
 </Project>
