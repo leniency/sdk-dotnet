@@ -145,9 +145,9 @@ namespace AuthorizeNet {
 			
 			return new GatewayResponse (rawResponse);
 		}
-		
-		
-		class PolicyOverride : ICertificatePolicy
+
+#if !NETSTANDARD2_0
+        class PolicyOverride : ICertificatePolicy
 		{
 
 			bool ICertificatePolicy.CheckValidationResult (ServicePoint srvPoint, System.Security.Cryptography.X509Certificates.X509Certificate cert, WebRequest request, int certificateProblem)
@@ -155,7 +155,7 @@ namespace AuthorizeNet {
 				return true;
 			}
 		}
-
+#endif
 
 
 	}
